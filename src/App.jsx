@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { AddCategory } from './components/AddCategory';
+
 
 const initialState = [ 'dogs', 'cats' ];
 
@@ -29,6 +31,7 @@ const App = () => {
             <h1>Gif Proyect App</h1>
 
             {/* Input */}
+            <AddCategory />
             <button onClick={ handleAddNewCategory }>Agregar</button>
 
             {/* Listado de gif */}
