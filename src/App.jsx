@@ -38,7 +38,7 @@ const App = () => {
             {   categories.map( ( category, index ) => (
                     <GifGrid
                         key={ category } 
-                        title={ category } 
+                        category={ category } 
                     />
                 ))
             }
