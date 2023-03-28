@@ -8,12 +8,28 @@ const App = () => {
 
     const [ categories, setCategories ] = useState( initialState );
 
+
+    const handleAddNewCategory = () => {
+        // Forma 1
+        // setCategories([
+        //     ...categories,
+        //     'fruits'
+        // ]);
+
+        // Forma 2
+        setCategories( categories => [ 
+            ...categories, 'vegetables' 
+        ]);
+    }
+
+
     return (
         <>
             {/* Title */}
             <h1>Gif Proyect App</h1>
 
             {/* Input */}
+            <button onClick={ handleAddNewCategory }>Agregar</button>
 
             {/* Listado de gif */}
             <ol>
