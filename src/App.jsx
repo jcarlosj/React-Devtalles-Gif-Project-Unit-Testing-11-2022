@@ -31,7 +31,7 @@ const App = () => {
             <h1>Gif Proyect App</h1>
 
             {/* Input */}
-            <AddCategory />
+            <AddCategory setCategories={ setCategories } />
             <button onClick={ handleAddNewCategory }>Agregar</button>
 
             {/* Listado de gif */}
