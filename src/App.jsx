@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 
 const initialState = [ 'dogs', 'cats' ];
@@ -32,12 +33,15 @@ const App = () => {
                 // setCategories={ setCategories } 
                 onNewValue={ event => handleAddNewCategory( event )  }
             />
-            <button onClick={ handleAddNewCategory }>Agregar</button>
 
-            {/* Listado de gif */}
-            <ol>
-                {   categories.map( ( category, index ) => <li key={ index }>{ category }</li> ) }
-            </ol>
+            {/* Listado de gif */}  
+            {   categories.map( ( category, index ) => (
+                    <GifGrid
+                        key={ category } 
+                        title={ category } 
+                    />
+                ))
+            }
         </>
     )
 }
