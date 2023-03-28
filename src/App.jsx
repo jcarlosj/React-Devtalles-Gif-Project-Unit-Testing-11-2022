@@ -12,6 +12,9 @@ const App = () => {
 
 
     const handleAddNewCategory = ( newCategory ) => {
+
+        if( categories.includes( newCategory ) ) return;
+
         setCategories([
             newCategory,
             ...categories
