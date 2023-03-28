@@ -10,15 +10,20 @@ export const AddCategory = () => {
         setInputValue( target.value );
     }
 
+    const handleOnSubmit = ( event ) => {
+        event.preventDefault();
+        console.log( inputValue );
+    }
+
 
     return (
-        <>
+        <form onSubmit={ handleOnSubmit }>
             <input 
                 type="text"
                 placeholder="Buscar"
                 value={ inputValue }
-                onChange={ ( event ) => handleOnInputChange( event ) }
+                onChange={ handleOnInputChange }
             />
-        </>
-    )
+        </form>
+    ) 
 }
