@@ -11,16 +11,10 @@ const App = () => {
     const [ categories, setCategories ] = useState( initialState );
 
 
-    const handleAddNewCategory = () => {
-        // Forma 1
-        // setCategories([
-        //     ...categories,
-        //     'fruits'
-        // ]);
-
-        // Forma 2
-        setCategories( categories => [ 
-            ...categories, 'vegetables' 
+    const handleAddNewCategory = ( newCategory ) => {
+        setCategories([
+            newCategory,
+            ...categories
         ]);
     }
 
@@ -31,7 +25,10 @@ const App = () => {
             <h1>Gif Proyect App</h1>
 
             {/* Input */}
-            <AddCategory setCategories={ setCategories } />
+            <AddCategory
+                // setCategories={ setCategories } 
+                onNewValue={ event => handleAddNewCategory( event )  }
+            />
             <button onClick={ handleAddNewCategory }>Agregar</button>
 
             {/* Listado de gif */}

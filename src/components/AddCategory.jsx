@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-export const AddCategory = ({ setCategories }) => {
+export const AddCategory = ({ onNewValue }) => {
     const [ inputValue, setInputValue ] = useState( '' );
 
 
@@ -16,10 +16,13 @@ export const AddCategory = ({ setCategories }) => {
 
         if( inputValue.trim().length <= 1 ) return;
 
-        setCategories( categories => [
-            inputValue,
-            ...categories
-        ]);
+        // Cambia el estado del padre
+        // setCategories( categories => [
+        //     inputValue,
+        //     ...categories
+        // ]);
+
+        onNewValue( inputValue.trim() ); // Emite un evento al padre y recibe un valor
         setInputValue( '' );
     }
 
