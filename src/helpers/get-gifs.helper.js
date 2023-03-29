@@ -14,7 +14,7 @@ export const getGifs = async ( search_term ) => {
         url: obj_img.images.downsized_medium.url
     }));
 
-    console.log( gifs );
+    // console.log( gifs );
 
     return gifs;
 }

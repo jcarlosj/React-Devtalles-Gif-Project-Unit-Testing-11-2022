@@ -4,7 +4,7 @@ import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
 
-const initialState = [ 'dogs', 'cats' ];
+const initialState = [];
 
 
 const App = () => {
