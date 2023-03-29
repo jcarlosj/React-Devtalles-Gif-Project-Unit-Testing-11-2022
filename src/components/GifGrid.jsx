@@ -1,22 +1,14 @@
 import { useEffect, useState } from 'react';
 
 import { GifItem } from './GifItem';
-import { getGifs } from '../helpers/get-gifs.helper';
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 
 export const GifGrid = ({ category }) => {
 
-    const [ images, setImages ] = useState([]);
+    const { images, isLoading } = useFetchGifs( category );
 
-
-    const getImages = async () => {
-        const newImages = await getGifs( category );
-        setImages( newImages );
-    }
-    
-    useEffect(() => {
-        getImages();
-    }, [] );                        // No definir dependencias indica a useEffect que se ejecute solo la primera vez con la renderización del componente
+    console.log({ images, isLoading });
 
 
     return (
