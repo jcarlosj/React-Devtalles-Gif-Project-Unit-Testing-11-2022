@@ -1,6 +1,6 @@
 // Buena practica: La funcion ya NO estará re-procesandose junto con el cambio del componente puesto que esta aislada del mismo
 export const getGifs = async ( search_term ) => {
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=41kSedYo8fgY6Ofp5SH6snPYPBMrz8FL&q=${ search_term }&limit=20`;
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=41kSedYo8fgY6Ofp5SH6snPYPBMrz8FL&q=${ search_term }&limit=9`;
 
     const
         response = await fetch( url ),

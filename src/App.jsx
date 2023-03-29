@@ -24,7 +24,7 @@ const App = () => {
 
 
     return (
-        <>
+        <main className="container">
             {/* Title */}
             <h1>Gif Proyect App</h1>
 
@@ -42,7 +42,7 @@ const App = () => {
                     />
                 ))
             }
-        </>
+        </main>
     )
 }
 
