@@ -8,7 +8,7 @@ export const GifGrid = ({ category }) => {
 
     const { images, isLoading } = useFetchGifs( category );
 
-    console.log({ images, isLoading });
+    // console.log({ images, isLoading });
 
 
     return (
